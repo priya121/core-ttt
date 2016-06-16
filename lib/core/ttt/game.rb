@@ -1,5 +1,3 @@
-require 'board'
-
 class Game
     attr_accessor :board
     attr_accessor :player_x
@@ -23,8 +21,8 @@ class Game
 
     def mark_board
       return @board if game_over?
-      current_player_move = next_player.move(board)
-      @board = board.mark(next_player.mark, current_player_move)
+      current_player_move = next_player.move(@board)
+      @board = @board.mark(next_player.mark, current_player_move)
     end
 
     def empty_position?(input)
@@ -40,6 +38,6 @@ class Game
     end
 
     def mark_at(index)
-      board.cells[index]
+      @board.cells[index]
     end
 end

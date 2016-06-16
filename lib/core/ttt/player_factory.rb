@@ -1,5 +1,5 @@
-require "human_player"
-require "computer_player"
+require "core/ttt/human_player"
+require "core/ttt/computer_player"
 
 class PlayerFactory
   attr_accessor :console
@@ -9,10 +9,10 @@ class PlayerFactory
   end
 
   def make_x(choice)
-    choice == 1 || choice == 2 ? HumanPlayer.new(console, "X") : ComputerPlayer.new("X")
+    choice == 1 || choice == 2 ? HumanPlayer.new(@console, "X") : ComputerPlayer.new("X")
   end
 
   def make_o(choice)
-    choice == 1 || choice == 3 ? HumanPlayer.new(console, "O") : ComputerPlayer.new("O")
+    choice == 1 || choice == 3 ? HumanPlayer.new(@console, "O") : ComputerPlayer.new("O")
   end
 end
