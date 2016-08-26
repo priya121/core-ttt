@@ -22,7 +22,7 @@ class Game
   def mark_board
     return @board if game_over?
     current_player_move = next_player.move(@board)
-    if empty_position?
+    if empty_position?(current_player_move)
       @board = @board.mark(next_player.mark, current_player_move)
     end
   end

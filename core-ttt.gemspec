@@ -1,11 +1,10 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'core/ttt/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "core-ttt"
-  spec.version       = "0.4.0" 
+  spec.version       = "0.5.0" 
   spec.authors       = ["priya121"]
   spec.email         = ["priya121@github.com"]
 

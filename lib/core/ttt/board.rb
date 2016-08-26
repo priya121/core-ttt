@@ -72,4 +72,10 @@ class Board
     def any_win?
       win?("X") || win?('O')
     end
+
+    def rows
+      size = cells.size
+      row_length = Math.sqrt(size)
+      cells.each_slice(row_length).to_a
+    end
 end
